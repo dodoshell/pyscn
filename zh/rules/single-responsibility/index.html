@@ -33,7 +33,7 @@
       
       
       <link rel="icon" href="../../../assets/icon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -41,10 +41,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3457,7 +3457,7 @@
 <strong>Triggered by</strong>: <code>pyscn analyze</code>, <code>pyscn check --select deps</code></p>
 <h2 id="_1">检测内容<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>标记承担超过 <code>architecture.max_responsibilities</code>（默认 <code>3</code>）个不同依赖关注点的模块，或扇入扇出均高于项目平均水平的枢纽模块。</p>
-<p>"关注点"由该模块依赖的名称推断而来：对于它导入的每个模块，分析器取依赖路径中与当前模块不重叠的第一个段，并跳过通用兜底名称（<code>base</code>、<code>common</code>、<code>helpers</code>、<code>node</code>、<code>shared</code>、<code>util</code>、<code>utils</code>）。去重后的段数即为 pyscn 归属于该模块的职责数量。导入它的模块（扇入）不计入关注点——被广泛复用本身不是一种职责。</p>
+<p>"关注点"由该模块依赖的名称推断而来：对于它导入的每个模块，分析器取依赖路径中与当前模块不重叠的第一个段，并跳过通用兜底名称（<code>base</code>、<code>common</code>、<code>helpers</code>、<code>node</code>、<code>shared</code>、<code>util</code>、<code>utils</code>）。同一包内的兄弟模块统一计为一个以该包命名的关注点，因此组合私有辅助模块的门面模块不会按文件逐个计为关注点；兄弟子包仍分别计数。去重后的段数即为 pyscn 归属于该模块的职责数量。导入它的模块（扇入）不计入关注点——被广泛复用本身不是一种职责。</p>
 <p>满足以下任一条件即会报告:</p>
 <ul>
 <li>拥有的不同关注点数量超过 <code>max_responsibilities</code>。</li>
@@ -3619,10 +3619,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.path", "navigation.top", "navigation.indexes", "navigation.tracking", "header.autohide", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.action.edit", "content.tooltips", "announce.dismiss"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.path", "navigation.top", "navigation.indexes", "navigation.tracking", "header.autohide", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.action.edit", "content.tooltips", "announce.dismiss"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>
